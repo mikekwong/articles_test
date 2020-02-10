@@ -1,16 +1,16 @@
-export const ADD_ARTICLE = "ADD_ARTICLE";
+export const ADD_ARTICLE = 'ADD_ARTICLE'
 
 const initialState = {
-  articles: [{ title: "React Redux Tutorial for Beginners", id: 1 }]
-};
+  articles: []
+}
 
-const otherReducer = (state = initialState, action) => {
+const addArticleReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ARTICLE:
-      return { ...state, articles: [...state.articles, action.payload] };
+      return { ...state, articles: [...state.articles, action.payload] }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default otherReducer;
+export default addArticleReducer

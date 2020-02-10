@@ -1,16 +1,18 @@
-import React from "react";
-import "./App.css";
-import { addArticle } from "./actions";
-import { connect } from "react-redux";
+import React from 'react'
+import List from './components/List'
+import Form from './components/Form'
 
-import List from "./components/List";
-
-const App = () => {
-  return (
+const App = () => (
+  <div>
     <div>
+      <h2>Articles</h2>
       <List />
     </div>
-  );
-};
+    <div>
+      <h2>Add a new article</h2>
+      <Form />
+    </div>
+  </div>
+)
 
-export default App;
+export default App

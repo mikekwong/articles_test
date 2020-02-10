@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React from 'react'
+import { connect } from 'react-redux'
 
 const mapStateToProps = state => ({
-  articles: state.articles
-});
+  articles: state.addArticle.articles
+})
 
 const List = ({ articles }) => (
   <ul>
-    {articles.map(article => (
-      <li key={article.id}>{article.title}</li>
+    {console.log(articles)}
+    {articles.map(({ id, title }) => (
+      <li key={title}>{title}</li>
     ))}
   </ul>
-);
+)
 
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(List)
